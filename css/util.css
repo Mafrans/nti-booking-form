@@ -72,3 +72,8 @@
 .cf:after {
   clear: both;
 }
+
+/* General Classes */
+.no-padding {
+	padding: 0;
+}
