@@ -165,6 +165,9 @@ user-info {
     border-bottom: 2px solid #DD0890;
 }
 
+
+
+/* Huge amount of styling for datetime fields */
 input[type="time"]::-webkit-datetime-edit-hour-field {
     color: #DD0890;
 }
@@ -173,6 +176,9 @@ input[type="time"]::-webkit-datetime-edit-minute-field {
 }
 input[type="time"]::-webkit-datetime-edit-text {
     padding: 5px;
+}
+.without_ampm::-webkit-datetime-edit-ampm-field {
+    display: none;
 }
 
 input[type="time"]::-webkit-inner-spin-button {
@@ -186,6 +192,9 @@ input[type="time"]::-webkit-clear-button {
 input[type="time"]::-ms-clear {
     display: none;
 }
+
+
+
 
 @media screen and (max-width: 550px) {
     .equipment {
