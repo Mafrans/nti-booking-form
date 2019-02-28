@@ -1,0 +1,54 @@
+.header {
+    min-height: 350px;
+    margin: 0;
+    width: 100vw;
+}
+
+.header img {
+    height: 50px;
+    margin: 40px;
+}
+
+.header .row {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.header .col-md-6 {
+    padding: 0;
+}
+
+.header-container {
+    margin-bottom: 40px;
+}
+
+.header-container h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-container p {
+    font-size: 18px;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-container .header-line {
+    position: relative;
+    bottom: 0px;
+    width: 40px;
+    border-top: #000 dotted 4px;
+}
+
+@media screen and (max-width: 600px) {
+    .header-container h1 {
+        font-size: 40px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .header img {
+        margin-left: 140px;
+    }
+}
