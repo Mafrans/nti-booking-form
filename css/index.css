@@ -45,9 +45,17 @@ p {
 }
 
 .header-line {
-    margin-left: 20px;
-    width: 21px;
+    width: 20px;
     border-top: #000 dotted 2px;
+}
+
+.form-box .header-line {
+    margin-left: 20px;
+}
+
+.main-column > .header-line {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .form-container {
@@ -59,7 +67,7 @@ p {
     margin: 5px;
 }
 
-user-info {
+.user-info {
     margin-top: 5px;
 }
 
@@ -139,9 +147,13 @@ user-info {
     color: #fff;
 }
 
+.time .row {
+    margin: 0;
+}
+
 .time .field {
     display: inline-block;
-    padding: 20px 20px 20px;
+    padding: 20px 5px 20px;
 }
 
 .time .field p {
@@ -158,14 +170,12 @@ user-info {
 
 .time .field input[type="time"] {
     font-size: 18px;
-    border: none;  /* remove any border */
-    background: none; /* remove any (default) background */
+    border: none;
+    background: none;
     outline: none;
     width: 100px;
     border-bottom: 2px solid #DD0890;
 }
-
-
 
 /* Huge amount of styling for datetime fields */
 input[type="time"]::-webkit-datetime-edit-hour-field {
@@ -194,6 +204,66 @@ input[type="time"]::-ms-clear {
 }
 
 
+
+
+.form-container .date-title {
+    margin: 0px;
+    margin-left: 20px;
+}
+
+/*.date-today, .date-tomorrow {
+    padding: 20px;
+}*/
+
+.date .column {
+    padding: 0px;
+}
+.date .row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.date .button {
+    width: 100%;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+.date p {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.radio {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-right: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.radio-filler {
+    background: #DD0890;
+    border-radius: 50%;
+    width: 0%;
+    height: 0%;
+    margin: 50%;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+.radio.selected .radio-filler {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+
+.confirmation {
+    margin-top: 10px;
+}
+.confirmation span {
+    position: relative;
+    bottom: 10px;
+}
 
 
 @media screen and (max-width: 550px) {
