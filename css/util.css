@@ -1,16 +1,24 @@
 /* Font replacements */
-.soleto-medium {
-	font-family: 'Titillium Web', sans-serif;
-	font-weight: 600;
-}
-.soleto-regular {
-	font-family: 'Titillium Web', sans-serif;
-	font-weight: 400;
-}
 .soleto-light {
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 300;
 }
+
+.soleto-regular {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400;
+}
+
+.soleto-medium {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+}
+
+.soleto-bold {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 700;
+}
+
 .soleto-xbold {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 800;
