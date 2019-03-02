@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/modals.css">
+    <link rel="stylesheet" type="text/css" href="css/error.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
 
     <!-- fonts -->
@@ -37,18 +38,40 @@
         <div class="main-row row">
             <div class="col-md-2 col-xl-3"></div>
             <div class="main-column col-lg-8 col-xl-6">
-                <div class="header-container">
-                    <p class="soleto-light">Endast elever på NTI Gymnasiet kan boka tid i Makerspace. För att fortsätta, logga in med Google-kontot du fått av NTI Gymnasiet.</p>
-                    <a class="button" href="#insert-redirect">
-                        <img src="lib/Google%20G%20Logo.svg">
-                        <span class="soleto-regular">Logga in med Google</span>
-                    </a>
+                <div class="form-box finished">
+                    <div class="title-container">
+                        <img class="magenta" src="lib/Ikon%20Error.svg">
+                        <h2 class="soleto-bold magenta">NÅGOT GICK OTROLIGT FEL</h2>
+                    </div>
+                    <div class="header-line"></div>
+                    <div class="info-container">
+                        <h3 class="soleto-bold">403:1 - Timestamp overlap</h3>
+                        <p class="soleto-light">
+                            En av dina inskrivna tider överlappade med en redan existerande bokning.<br><a href="#modal" class="soleto-light" onclick="openModal('#error-modal')">Mer info om error 403:1</a>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-2 col-xl-3"></div>
         </div>
     </div>
-
+    <div class="jsmodal jsmodal-medium" id="error-modal">
+        <h1 class="soleto-regular">Error 403:1</h1>
+        <a class="jsmodal-close" href="#closemodal" onclick="closeParentModal(this)">X</a>
+        <h3 class="soleto-light">Bad Request - Timestamp overlap</h3>
+        <hr>
+        <p class="soleto-light">
+            Detta fel orsakas då en eller flera tidstämplar överlappar med en redan existerande bokning.<br>
+            <br/>
+            Vad kan jag göra för att undvika felet?
+            <ul>
+                <li class="soleto-light">Kolla på skärmen om någon annan har bokat samma tid som du.</li>
+                <li class="soleto-light">Se till att du bokat tiden på rätt dag</li>
+                <li class="soleto-light">Om du bokat tiden på en dag som ligger i framtiden kommer inte skärmen uppdateras med din bokning, då får du helt enkelt gissa.</li>
+                <li class="soleto-light">Om du tror att det är något fel på systemet, kontakta någon av <a href="https://github.com/ntig-umea-students" target="_blank">hemsidans ägare</a></li>
+            </ul>
+        </p>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
