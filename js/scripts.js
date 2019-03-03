@@ -94,8 +94,12 @@ function checkRequired() {
 
     var validFromTime = (fromTime >= minTime && fromTime <= maxTime);
     var validToTime = (toTime >= minTime && toTime <= maxTime);
+	var inverseTime = toTime - fromTime < 0;
 
-    if(!validFromTime) {
+    if(inverseTime) {
+        $(".error-message").text("Du kan inte boka en negativ mängd tid");
+    }
+    else if(!validFromTime) {
         $(".error-message").text("'Från klockan' måste vara mellan 8:00 och 16:00");
     }
     else if(!validToTime) {
@@ -156,6 +160,18 @@ function closeParentModal(child) {
 }
 
 
+function submitData() {
+    var json = {};
+
+    json.author = $(".user-name").text();
+	console.log($(".equipment .button.selected span").text());
+    json.equipment = $(".equipment .button.selected span").text();
+    json.date = $(".date .button.selected span").text();
+    json.from = parseTime($(".from input").val());
+    json.to = parseTime($(".to input").val());
+
+    console.log(json);
+}
 
 function createModals() {
     $(".jsmodal").wrap("<div onclick='backdropClick(this)' class='jsmodal-backdrop'></div>");

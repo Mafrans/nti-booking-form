@@ -310,6 +310,44 @@ input[type="time"]::-ms-clear {
     position: relative;
 }
 
+.grid-parent {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-parent .grid-row {
+    margin: 0;
+}
+
+.user-info {
+    display: inline-block;
+}
+
+.log-out {
+    margin-top: 7px;
+}
+
+.log-out img {
+    height: 20px;
+}
+
+.log-out span {
+    color: #000000;
+    margin-top: 7px;
+}
+
+.log-out a:hover {
+    text-decoration: none;
+}
+
+.log-out-container {
+    float: right;
+    display: inline-block;
+}
+
 
 @media screen and (max-width: 550px) {
     .equipment {
@@ -320,6 +358,12 @@ input[type="time"]::-ms-clear {
 @media screen and (max-width: 450px) {
     .button {
         width: 90%;
+    }
+
+    .log-out-container {
+        display: block;
+        float: unset;
+        left: 0;
     }
 }
 
